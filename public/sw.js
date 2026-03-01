@@ -13,6 +13,7 @@ self.addEventListener("push", (event) => {
     body: data.body || "This is a test notification.",
     icon: "/icon-192.png",
     badge: "/icon-192.png",
+    silent: false,
     data: { url: data.url || "/" },
   };
   event.waitUntil(self.registration.showNotification(title, options));
